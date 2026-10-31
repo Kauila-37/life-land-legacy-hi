@@ -75,7 +75,8 @@
   }
   </script>
 
-  <link rel="preload" as="image" href="photos/hero-sunset-lava.jpg">
+  <link rel="preload" as="image" href="photos/hero-sunset-lava-mobile.jpg" media="(max-width: 700px)">
+  <link rel="preload" as="image" href="photos/hero-sunset-lava.jpg" media="(min-width: 701px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -93,12 +94,12 @@
       --green-deep:  #1a2e20;
       --green-mid:   #2d5235;
       --green-sage:  #5a7e5d;
-      --gold:        #a07828;
+      --gold:        #7f5e1d;
       --gold-warm:   #c4982e;
       --gold-light:  #e0b84a;
       --text-dark:   #1c2b1e;
       --text-body:   #3d4e3f;
-      --text-muted:  #7a8c7c;
+      --text-muted:  #5c6d5e;
       --white:       #ffffff;
     }
 
@@ -220,6 +221,7 @@
     }
     .hero-slide.active { opacity: 0.65; }
     .hero-slide:nth-child(1) { background-image: url('photos/hero-sunset-lava.jpg'); }
+    @media (max-width: 700px) { .hero-slide:nth-child(1) { background-image: url('photos/hero-sunset-lava-mobile.jpg'); } }
     @keyframes kenburns-a { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.09) translate(-1.2%, -1%); } }
     @keyframes kenburns-b { from { transform: scale(1.09) translate(1.2%, 0); } to { transform: scale(1) translate(0, 0); } }
     .hero-slide.active { animation: kenburns-a 9s ease-out forwards; }
@@ -514,8 +516,8 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem;
       font-weight: 300;
-      color: var(--gold);
-      opacity: 0.5;
+      color: var(--gold-light);
+      opacity: 0.85;
       margin-top: 4px;
     }
     .insider-item h3 {
@@ -559,7 +561,7 @@
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold-warm);
+      color: var(--gold);
       display: block;
       margin-bottom: 1rem;
     }
@@ -846,7 +848,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.32);
+      color: rgba(255,255,255,0.6);
       margin-top: 0.3rem;
     }
     .footer-heading {
@@ -884,10 +886,10 @@
       gap: 0.28rem;
       text-align: right;
       font-size: 0.7rem;
-      color: rgba(255,255,255,0.32);
+      color: rgba(255,255,255,0.6);
     }
     .footer-legal p { font-size: 0.7rem; line-height: 1.6; color: inherit; }
-    .footer-copy { color: rgba(255,255,255,0.22); }
+    .footer-copy { color: rgba(255,255,255,0.55); }
     @media (max-width: 860px) {
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
       .footer-identity { grid-column: 1 / -1; }
@@ -1026,6 +1028,9 @@
       }
     }
   </style>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
